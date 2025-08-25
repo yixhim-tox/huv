@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2.00 Odds Builder — Real Games</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="container">
+    <h1>2.00 Odds Builder</h1>
+    <p class="sub">Fetch real upcoming games and build a safe slip totaling ≤ 2.00 (2–3 selections).</p>
+  </header>
+
+  <main class="container card">
+    <section class="controls">
+      <div class="control">
+        <label for="sport">Sport/League</label>
+        <select id="sport">
+          <option value="soccer_epl">Soccer — English Premier League</option>
+          <option value="soccer_uefa_champs_league">Soccer — UEFA Champions League</option>
+          <option value="soccer_spain_la_liga">Soccer — Spain La Liga</option>
+          <option value="soccer_italy_serie_a">Soccer — Italy Serie A</option>
+          <option value="soccer_germany_bundesliga">Soccer — Germany Bundesliga</option>
+          <option value="soccer_france_ligue_one">Soccer — France Ligue 1</option>
+          <option value="basketball_nba">Basketball — NBA</option>
+        </select>
+      </div>
+
+      <div class="control">
+        <label for="region">Odds Region</label>
+        <select id="region">
+          <option value="eu">EU (decimal)</option>
+          <option value="uk">UK</option>
+          <option value="us">US</option>
+          <option value="au">AU</option>
+        </select>
+      </div>
+
+      <div class="control">
+        <label for="maxLegs">Max legs</label>
+        <select id="maxLegs">
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button id="btnFind">Find 2.00 Slip</button>
+        <button id="btnRefresh" class="secondary">Refresh Games</button>
+      </div>
+    </section>
+
+    <section id="status" class="status"></section>
+
+    <section id="tips" class="tips"></section>
+  </main>
+
+  <footer class="container foot">
+    <p>Built with <a href="https://theoddsapi.com" target="_blank" rel="noopener">The Odds API</a>. Please bet responsibly. This is not financial advice.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
